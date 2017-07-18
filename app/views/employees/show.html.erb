@@ -1,0 +1,20 @@
+<h1><%=@employee.name %> Details </h1>
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p> 
+<p>
+  <strong>Project:</strong>
+  <%= @employee.project.project %>
+</p>
+<p>
+  <strong>Skills:</strong>
+  <% @employee.skills.each do |x| %>
+  <%= x.skill %>
+  <% end %>
+</p>
+<p>
+  <strong>Lead:</strong>
+  <%= @employee.lead.lead_name %>
+</p>
+<td><%= link_to 'Back to welcome page', welcome_index_path() %></td>
